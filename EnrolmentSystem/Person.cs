@@ -24,7 +24,7 @@ namespace EnrolmentSystem
         public static string PhoneNumber { get; set; }
         public Address Address { get; set; }
 
-        public Person(): this(DEF_NAME, DEF_EMAIL, DEF_PHONE_NUMBER, new Address()) { }
+        public Person(): this(DEF_NAME, DEF_EMAIL, DEF_PHONE_NUMBER, DEF_ADDRESS) { }
 
         public Person(string name, string email, string phoneNumber, Address address)
         {
