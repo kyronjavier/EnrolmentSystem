@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EnrolmentSystem
 {
-    internal class Address
+    public class Address
     {
         public const string DEF_STREET_NUM = "None Provided";
         public const string DEF_STREET_NAME = "None Provided";

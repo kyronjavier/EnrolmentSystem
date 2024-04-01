@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EnrolmentSystem
 {
-    internal class Utility
+    public class Utility
     {
         /// <summary>
         /// Performs a sequential search through the array to find the target element.
@@ -39,7 +39,7 @@ namespace EnrolmentSystem
 
             while (left <= right)
             {
-                int mid = left + (right - left) / 2;
+                int mid = (right + left) / 2;
 
                 if (array[mid].Equals(target))
                     return mid;

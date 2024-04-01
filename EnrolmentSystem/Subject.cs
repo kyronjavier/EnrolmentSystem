@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EnrolmentSystem
 {
-    internal class Subject
+    public class Subject
     {
         public const string DEFAULT_SUBJECT_CODE = "Not Provided";
         public const string DEFAULT_SUBJECT_NAME = "N/A";
