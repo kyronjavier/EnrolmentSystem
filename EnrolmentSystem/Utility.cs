@@ -58,13 +58,13 @@ namespace EnrolmentSystem
         /// </summary>
         /// <typeparam name="T">Type of the objects to be sorted</typeparam>
         /// <param name="array">The array to be sorted</param>
-        public static void BubbleSortAscending<T>(T[] array) where T : IComparable<T>
+        public static void BubbleSortAscending<T>(T[] array, Func<T, T, int> comparer) where T : IComparable<T>
         {
             for (int i = 0; i < array.Length - 1; i++)
             {
                 for (int j = 0; j < array.Length - i - 1; j++)
                 {
-                    if (array[j].CompareTo(array[j + 1]) > 0)
+                    if (comparer(array[j], array[j + 1]) > 0)
                     {
                         // Swap array[j] and array[j+1]
                         T temp = array[j];
@@ -80,13 +80,13 @@ namespace EnrolmentSystem
         /// </summary>
         /// <typeparam name="T">Type of the objects to be sorted</typeparam>
         /// <param name="array">The array to be sorted</param>
-        public static void BubbleSortDescending<T>(T[] array) where T : IComparable<T>
+        public static void BubbleSortDescending<T>(T[] array, Func<T, T, int> comparer) where T : IComparable<T>
         {
             for (int i = 0; i < array.Length - 1; i++)
             {
                 for (int j = 0; j < array.Length - i - 1; j++)
                 {
-                    if (array[j].CompareTo(array[j + 1]) < 0)
+                    if (comparer(array[j], array[j + 1]) < 0)
                     {
                         // Swap array[j] and array[j+1]
                         T temp = array[j];

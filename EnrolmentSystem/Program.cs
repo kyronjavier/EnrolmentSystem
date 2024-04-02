@@ -104,30 +104,30 @@ namespace EnrolmentSystem
 
         };
 
-            students[0].Name = "Xavier";
-            students[1].Name = "Kyle";
-            students[2].Name = "Aaron";
-            students[3].Name = "Ian";
-            students[4].Name = "Ivan";
-            students[5].Name = "Carlo";
-            students[6].Name = "Heidi";
-            students[7].Name = "Reyka";
-            students[8].Name = "Shayne";
-            students[9].Name = "Angelica";
+            string[] studentNames = { "Kyron", "Kyle", "Javier", "Ian", "Ivan", "Carlo", "Heidi", "Reyka", "Shayne", "Angelica" };
 
+            for (int i = 0; i < students.Length; i++)
+            {
+                students[i].Name = studentNames[i];
+            }
 
-            Utility.BubbleSortDescending(students);
+            Console.WriteLine();
+
+            Console.WriteLine("Bubble Sort Descending: Results");
+            Utility.BubbleSortDescending(students, (s1, s2) => s1.Name.CompareTo(s2.Name));
             for (int i = 0; i < students.Length; i++)
             {
                 Console.WriteLine(students[i].Name);
             }
-            Utility.BubbleSortAscending(students);
+
+            Console.WriteLine();
+            Console.WriteLine("Bubble Sort Ascending: Results");
+            Utility.BubbleSortAscending(students, (s1, s2) => s1.Name.CompareTo(s2.Name));
 
             for (int i = 0; i < students.Length; i++)
             {
                 Console.WriteLine(students[i].Name);
             }
-            Console.WriteLine(students);
 
             Console.ReadKey();
 

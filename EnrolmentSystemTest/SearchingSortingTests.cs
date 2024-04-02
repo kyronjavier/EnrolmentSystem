@@ -82,7 +82,7 @@ namespace EnrolmentTest
         [Test]
         public void TestBubbleSortAscending_StudentID()
         {
-            Utility.BubbleSortAscending(students);
+            Utility.BubbleSortAscending(students, (s1, s2) => s1.StudentID.CompareTo(s2.StudentID));
             Assert.AreEqual("001172630", students[0].StudentID); // Verify first element after sorting
             Assert.AreEqual("001172639", students[students.Length - 1].StudentID); // Verify last element after sorting
         }
@@ -90,7 +90,7 @@ namespace EnrolmentTest
         [Test]
         public void TestBubbleSortDescending_StudentID()
         {
-            Utility.BubbleSortDescending(students);
+            Utility.BubbleSortDescending(students, (s1, s2) => s1.StudentID.CompareTo(s2.StudentID));
             Assert.AreEqual("001172639", students[0].StudentID); // Verify first element after sorting
             Assert.AreEqual("001172630", students[students.Length - 1].StudentID); // Verify last element after sorting
         }
@@ -98,7 +98,7 @@ namespace EnrolmentTest
         [Test]
         public void TestBubbleSortAscending_Name()
         {
-            Utility.BubbleSortAscending<Student>(students);
+            Utility.BubbleSortAscending(students, (s1, s2) => s1.Name.CompareTo(s2.Name)); // Sort by Name
             Assert.AreEqual("Angelica", students[0].Name); // Verify first element after sorting
             Assert.AreEqual("Shayne", students[students.Length - 1].Name); // Verify last element after sorting
         }
@@ -106,7 +106,7 @@ namespace EnrolmentTest
         [Test]
         public void TestBubbleSortDescending_Name()
         {
-            Utility.BubbleSortDescending<Student>(students);
+            Utility.BubbleSortDescending(students, (s1, s2) => s1.Name.CompareTo(s2.Name));
             Assert.AreEqual("Shayne", students[0].Name); // Verify first element after sorting
             Assert.AreEqual("Angelica", students[students.Length - 1].Name); // Verify last element after sorting
         }
