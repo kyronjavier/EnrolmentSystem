@@ -30,9 +30,9 @@ namespace EnrolmentSystem
         /// <param name="studentID"></param>
         /// <param name="studentProgram"></param>
         /// <param name="dateRegistered"></param>
-        public Student(string studentID, string studentProgram, DateTime dateRegistered) 
-            : this(Name, Email, PhoneNumber, new Address(), studentID, studentProgram, dateRegistered, new Enrollment()) { }
-        
+        public Student(string studentID, string studentProgram, DateTime dateRegistered)
+            : this(DEF_NAME, DEF_EMAIL, DEF_PHONE_NUMBER, new Address(), studentID, studentProgram, dateRegistered, new Enrollment()) { }
+
         /// <summary>
         /// New all arg constructor with enrollment object
         /// </summary>
