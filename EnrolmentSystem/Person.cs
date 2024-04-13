@@ -12,8 +12,6 @@ namespace EnrolmentSystem
         public const string DEF_EMAIL = "unknown@example.com";
         public const string DEF_PHONE_NUMBER = "N/A";
 
-        public static Address DEF_ADDRESS = new Address("123", "Main Street", "City", "1234", "SA");
-
         //private string name;
         //private string email;
         //private string phoneNumber;

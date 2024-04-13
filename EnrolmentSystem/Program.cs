@@ -33,8 +33,8 @@ namespace EnrolmentSystem
 
             // Testing Student All arg constructor
             Console.WriteLine("Testing Student all arg: ");
-            //Person Person = new Person();
-            Student student = new Student("123456", "Computer Science", DateTime.Now, studentEnrollment);
+            Address yohanAddress = new Address("987", "King Street", "Pooraka", "4132", "SA");
+            Student student = new Student("Yohan", "yohan@email.com", "0432456798", yohanAddress, "123456", "Computer Science", DateTime.Now, studentEnrollment);
             Console.WriteLine(student);
 
 
@@ -42,11 +42,14 @@ namespace EnrolmentSystem
 
             Enrollment studentEnrollment2 = new Enrollment(DateTime.Now, "PA", "Semester 1");
 
-            Student student1 = new Student("1234567", "Engineering", DateTime.Now, studentEnrollment);
+            Address student1Address = new Address("123", "Elizabeth Street", "Mawson Lakes", "0987", "SA");
+            Student student1 = new Student("Kyle", "kyle@email.com", "0499876543", student1Address,"1234567", "Engineering", DateTime.Now, studentEnrollment);
 
-            Student student2 = new Student("1928344", "Information Technology", DateTime.Now, studentEnrollment2);
+            Address student2Address = new Address("345", "Herrera Street", "Parafield Gardens", "9876", "SA");
+            Student student2 = new Student("Aaron", "aaron@email.com", "0412345678", student2Address, "1928344", "Information Technology", DateTime.Now, studentEnrollment2);
 
-            Student student3 = new Student("1234567", "Engineering", DateTime.Now, studentEnrollment);
+            Address student3Address = new Address("456", "Barcelona Street", "Enfield", "8765", "SA");
+            Student student3 = new Student("Kyron", "kyron@email.com", "0498765432", student3Address, "1234567", "Engineering", DateTime.Now, studentEnrollment);
 
             Console.WriteLine();
 
