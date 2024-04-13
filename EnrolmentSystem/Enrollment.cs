@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EnrolmentSystem
 {
-    internal class Enrollment
+    public class Enrollment
     {
         const string DEF_GRADE = "N/A";
         const string DEF_SEMESTER = "Not provided";

@@ -76,6 +76,62 @@ namespace EnrolmentSystem
             Console.WriteLine("Hash code of Student 2: " + student2.GetHashCode());
             Console.WriteLine("Hash code of Student 3: " + student3.GetHashCode());
 
+            // Test Bubble sort ascending
+
+            Enrollment[] enrollments = new Enrollment[]
+            {
+                new Enrollment(DateTime.Now, "PA", "Semester 1"),
+                new Enrollment(DateTime.Now, "FA", "Semester 3"),
+                new Enrollment(DateTime.Now, "PA", "Semester 2"),
+                new Enrollment(DateTime.Now, "PA", "Semester 2"),
+                new Enrollment(DateTime.Now, "PA", "Semester 2"),
+                new Enrollment(DateTime.Now, "FA", "Semester 3"),
+                new Enrollment(DateTime.Now, "PA", "Semester 1"),
+                new Enrollment(DateTime.Now, "PA", "Semester 3"),
+                new Enrollment(DateTime.Now, "PA", "Semester 2"),
+                new Enrollment(DateTime.Now, "FA", "Semester 1"),
+            };
+
+            Student[] students = new Student[]
+            {
+                new Student("001172631", "Computer Science", DateTime.Now, enrollments[0]),
+                new Student("001172632", "Computer Engineering", DateTime.Now, enrollments[1]),
+                new Student("001172633", "Medical Science", DateTime.Now, enrollments[2]),
+                new Student("001172634", "Hospitality Management", DateTime.Now, enrollments[3]),
+                new Student("001172635", "Mechanical Engineering", DateTime.Now, enrollments[4]),
+                new Student("001172636", "Law", DateTime.Now, enrollments[5]),
+                new Student("001172637", "Journalism", DateTime.Now, enrollments[6]),
+                new Student("001172638", "Information Technology", DateTime.Now, enrollments[7]),
+                new Student("001172639", "Aeronautics", DateTime.Now, enrollments[8]),
+                new Student("001172630", "Computer Science", DateTime.Now, enrollments[9]),
+
+        };
+
+            string[] studentNames = { "Kyron", "Kyle", "Javier", "Ian", "Ivan", "Carlo", "Heidi", "Reyka", "Shayne", "Angelica" };
+
+            for (int i = 0; i < students.Length; i++)
+            {
+                students[i].Name = studentNames[i];
+            }
+
+            Console.WriteLine();
+
+            Console.WriteLine("Bubble Sort Descending: Results");
+            Utility.BubbleSortDescending(students, (s1, s2) => s1.Name.CompareTo(s2.Name));
+            for (int i = 0; i < students.Length; i++)
+            {
+                Console.WriteLine(students[i].Name);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Bubble Sort Ascending: Results");
+            Utility.BubbleSortAscending(students, (s1, s2) => s1.Name.CompareTo(s2.Name));
+
+            for (int i = 0; i < students.Length; i++)
+            {
+                Console.WriteLine(students[i].Name);
+            }
+
             Console.ReadKey();
 
         }

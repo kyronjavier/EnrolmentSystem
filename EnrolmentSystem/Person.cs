@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EnrolmentSystem
 {
-    internal class Person
+    public class Person
     {
         public const string DEF_NAME = "None Provided";
         public const string DEF_EMAIL = "unknown@example.com";
@@ -17,9 +17,9 @@ namespace EnrolmentSystem
         //private string phoneNumber;
         //private Address address;
 
-        public static string Name { get; set; }
-        public static string Email { get; set; }
-        public static string PhoneNumber { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
         public Address Address { get; set; }
 
         public Person(): this(DEF_NAME, DEF_EMAIL, DEF_PHONE_NUMBER, new Address()) { }

@@ -10,7 +10,7 @@ namespace EnrolmentSystem
     /// Represents a student with studentID, program, and dateRegistered
     /// </summary>
 
-    internal class Student : Person , IComparable<Student>
+    public class Student : Person , IComparable<Student>
     {
         public const string DEF_STUDENT_ID = "N/A";
         public const string DEF_PROGRAM = "Undeclared";
@@ -86,7 +86,7 @@ namespace EnrolmentSystem
         /// <returns></returns>
         public static bool operator > (Student a, Student b)
         {
-            return a < b;
+            return a.StudentID.CompareTo(b.StudentID) >0;
         }
         /// <summary>
         /// 
@@ -94,9 +94,9 @@ namespace EnrolmentSystem
         /// <param name="a"></param>
         /// <param name="b"></param>
         /// <returns></returns>
-        public static bool operator < (Student a, Student b)
+        public static bool operator <(Student a, Student b)
         {
-            return a < b;
+            return a.StudentID.CompareTo(b.StudentID) < 0;
         }
         /// <summary>
         /// Overriding equal operators
@@ -104,9 +104,13 @@ namespace EnrolmentSystem
         /// <param name="a"></param>
         /// <param name="b"></param>
         /// <returns>if two objects are equal</returns>
-        public static bool operator == (Student a, Student b)
+        public static bool operator ==(Student a, Student b)
         {
-            return object.Equals(a, b);
+            if (object.ReferenceEquals(a, b))
+                return true;
+            if ((object)a == null || (object)b == null)
+                return false;
+            return a.StudentID == b.StudentID;
         }
         /// <summary>
         /// overriding not equal operator
