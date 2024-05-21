@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnrolmentSystem", "EnrolmentSystem\EnrolmentSystem.csproj", "{2057F78E-19F6-4963-9168-65C83B266424}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnrolmentSystemTest", "EnrolmentSystemTest\EnrolmentSystemTest.csproj", "{4278EAA4-3148-4B01-AF98-56C051187024}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnrolmentSystemTest", "EnrolmentSystemTest\EnrolmentSystemTest.csproj", "{4278EAA4-3148-4B01-AF98-56C051187024}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

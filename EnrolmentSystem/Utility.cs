@@ -17,12 +17,20 @@ namespace EnrolmentSystem
         /// <returns>The index of the target element if found, otherwise -1</returns>
         public static int LinearSearchArray<T>(T[] array, T target) where T : IComparable<T>
         {
-            for (int i = 0; i < array.Length; i++)
+            try
             {
-                if (array[i].Equals(target))
-                    return i;
+                for (int i = 0; i < array.Length; i++)
+                {
+                    if (array[i].Equals(target))
+                        return i;
+                }
+                return -1;
             }
-            return -1;
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred during linear search: {ex.Message}");
+                return -1;
+            }
         }
 
         /// <summary>
@@ -34,23 +42,31 @@ namespace EnrolmentSystem
         /// <returns>The index of the target element if found, otherwise -1</returns>
         public static int BinarySearchArray<T>(T[] array, T target) where T : IComparable<T>
         {
-            int left = 0;
-            int right = array.Length - 1;
-
-            while (left <= right)
+            try
             {
-                int mid = (right + left) / 2;
+                int left = 0;
+                int right = array.Length - 1;
 
-                if (array[mid].Equals(target))
-                    return mid;
+                while (left <= right) 
+                {
+                    int mid = (right + left) / 2; // logic error fixed
 
-                if (array[mid].CompareTo(target) < 0)
-                    left = mid + 1;
-                else
-                    right = mid - 1;
+                    if (array[mid].Equals(target))
+                        return mid;
+
+                    if (array[mid].CompareTo(target) < 0)
+                        left = mid + 1;
+                    else
+                        right = mid - 1;
+                }
+
+                return -1;
             }
-
-            return -1;
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred during binary search: {ex.Message}");
+                return -1;
+            }
         }
 
         /// <summary>
